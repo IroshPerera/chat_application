@@ -15,7 +15,7 @@
             <Font name="Leelawadee Bold" size="32.0" />
          </font>
       </Label>
-      <ImageView fitHeight="391.0" fitWidth="369.0" layoutX="29.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgLogo" fitHeight="391.0" fitWidth="369.0" layoutX="29.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/logo.png" />
          </image>
