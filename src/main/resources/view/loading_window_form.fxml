@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="658.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chat_application.controller.LoadingWindowFormController">
    <children>
-      <ProgressBar layoutX="29.0" layoutY="436.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="369.0" progress="1.0" styleClass="green-bar" stylesheets="@style/color.css" />
+      <ProgressBar fx:id="progressBar" layoutX="29.0" layoutY="436.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="369.0" progress="0.0" styleClass="green-bar" stylesheets="@style/color.css" />
       <Label layoutX="110.0" layoutY="468.0" text="WhisperWave">
          <font>
             <Font name="Leelawadee Bold" size="32.0" />
