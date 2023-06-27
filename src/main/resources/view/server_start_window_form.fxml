@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="650.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chat_application.controller.ServerStartWindowFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="400.0" pickOnBounds="true">
+         <image>
+            <Image url="@img/background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="608.0" text="WhisperWave" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgLogo" fitHeight="391.0" fitWidth="369.0" layoutX="16.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" focusTraversable="false" graphicTextGap="20.0" layoutX="118.0" layoutY="413.0" onAction="#btnLoginOnAction" prefHeight="39.0" prefWidth="164.0" style="-fx-background-color: lightgreen; -fx-background-radius: 30px;" text="LOGIN">
+         <font>
+            <Font name="Leelawadee Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/login.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
