@@ -29,6 +29,8 @@ public class LoadingWindowFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        ImageView imageView = new ImageView();
+
         ScaleTransition zoomIn = new ScaleTransition(Duration.seconds(1.5), imgLogo);
         zoomIn.setFromX(1.0);
         zoomIn.setFromY(1.0);
