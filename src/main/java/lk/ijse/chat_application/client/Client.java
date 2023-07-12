@@ -1,4 +1,4 @@
-package lk.ijse.chat_application.dto;
+package lk.ijse.chat_application.client;
 
 
 import javafx.fxml.FXMLLoader;
@@ -40,7 +40,7 @@ public class Client implements Runnable, Serializable {
     @Override
     public void run() {
         try {
-            outputStream.writeUTF("-New Bra Joined to Chat-");
+            outputStream.writeUTF("-New Member Joined to Chat-");
             outputStream.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -73,6 +73,7 @@ public class Client implements Runnable, Serializable {
     }
 
     public void sendImage(byte[] bytes) throws IOException {
+        System.out.println(bytes);
         outputStream.writeUTF("*image*");
         outputStream.writeInt(bytes.length);
         outputStream.write(bytes);
@@ -119,7 +120,6 @@ public class Client implements Runnable, Serializable {
         int size = inputStream.readInt();
         byte[] bytes = new byte[size];
         inputStream.readFully(bytes);
-
         clientWindowFromController.setImage(bytes, utf);
     }
 
