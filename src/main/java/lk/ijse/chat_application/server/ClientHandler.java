@@ -1,4 +1,4 @@
-package lk.ijse.chat_application.dto;
+package lk.ijse.chat_application.server;
 import lk.ijse.chat_application.controller.ClientWindowFromController;
 
 import java.io.DataInputStream;
@@ -24,23 +24,23 @@ public class ClientHandler implements Runnable {
         clientHandlerList.add(this);
     }
 
-    public static void broadcast(String msg) throws IOException {
+  /*  public static void broadcast(String msg) throws IOException {
         for (ClientHandler handler : clientHandlerList) {
             handler.sendMessage("SERVER", msg);
         }
     }
-
+*/
     @Override
     public void run() {
        l1: while (socket.isConnected()) {
             try {
-                String utf = inputStream.readUTF();
-                if (utf.equals("*image*")) {
+                String message = inputStream.readUTF();
+                if (message.equals("*image*")) {
                     receiveImage();
                 } else {
                     for (ClientHandler handler : clientHandlerList) {
                         if (!handler.clientName.equals(clientName)) {
-                            handler.sendMessage(clientName, utf);
+                            handler.sendMessage(clientName, message);
                         }
                     }
                 }
