@@ -1,0 +1,16 @@
+
+CREATE DATABASE chat;
+
+USE chat;
+
+
+CREATE TABLE user
+(
+    name     varchar(50) not null,
+    password int         not null,
+    constraint user_name_uindex
+        unique (name)
+);
+
+ALTER TABLE user
+    ADD PRIMARY KEY (name);
